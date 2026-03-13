@@ -123,7 +123,7 @@ function renderFooter() {
         <div class="footer-col">
           <h4>Legal</h4>
           <p>COOLER COMPUTERS Spółka z ograniczoną odpowiedzialnością</p>
-          <p>Al. Aleje Jerozolimskie 89/43<br>02-001 Warszawa, Polska</p>
+          <p>Al. Aleje Jerozolimskie 89-43<br>02-001 Warszawa, Polska</p>
           <p>NIP: 5871703871<br>REGON: 361298155<br>KRS: 0000553944</p>
           <p>support@quantum-2027.com</p>
         </div>
