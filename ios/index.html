@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iOS Development — COOLER COMPUTERS</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+  <style>
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+    .feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; transition: border-color 0.3s, transform 0.3s; }
+    .feature-card:hover { border-color: rgba(0,229,255,0.3); transform: translateY(-4px); }
+    .feature-card h3 { font-size: 17px; font-weight: 700; margin: 14px 0 8px; }
+    .feature-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+    .tech-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+    .tech-pill { padding: 8px 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 100px; font-size: 14px; font-weight: 500; transition: all 0.2s; cursor: default; }
+    .tech-pill:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-primary { padding: 14px 32px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; border-radius: 12px; font-family: var(--font-head); font-weight: 700; font-size: 15px; cursor: pointer; border: none; transition: all 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,229,255,0.3); }
+    @media (max-width: 900px) { .features-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav></nav>
+<main>
+
+  <section style="padding:140px 0 80px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 70% 40%, rgba(0,229,255,0.08), transparent 60%);pointer-events:none;"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="section-label">iOS Development</div>
+      <h1 style="font-size:clamp(40px,6vw,72px);font-weight:800;letter-spacing:-3px;line-height:1.05;margin-bottom:20px;">Apps that feel<br><span class="gradient-text">at home on Apple.</span></h1>
+      <p style="color:var(--text-muted);font-size:18px;max-width:560px;line-height:1.7;margin-bottom:36px;">We build native iOS applications using Swift and SwiftUI — crafted with the precision, elegance, and performance that Apple's ecosystem demands.</p>
+      <button class="btn-primary" onclick="openModal()">Start Your iOS Project</button>
+    </div>
+  </section>
+
+  <section style="padding:80px 0;">
+    <div class="container">
+      <div class="section-label reveal">What We Offer</div>
+      <h2 style="font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;" class="reveal">Full-cycle iOS engineering</h2>
+      <div class="features-grid">
+        <div class="feature-card reveal"><div style="font-size:28px;">📱</div><h3>Native Swift &amp; SwiftUI</h3><p>Pure Swift code that takes full advantage of Apple's latest APIs and frameworks. No cross-platform shortcuts.</p></div>
+        <div class="feature-card reveal"><div style="font-size:28px;">🎨</div><h3>Premium UI/UX Design</h3><p>Pixel-perfect interfaces following Human Interface Guidelines — with custom animations users remember.</p></div>
+        <div class="feature-card reveal"><div style="font-size:28px;">🔒</div><h3>Security &amp; Privacy</h3><p>End-to-end encryption, Keychain integration, and privacy-first architecture. Your users' data stays protected.</p></div>
+        <div class="feature-card reveal"><div style="font-size:28px;">☁️</div><h3>Backend Integration</h3><p>REST APIs, GraphQL, Firebase, or custom backends. Real-time sync, push notifications, offline support.</p></div>
+        <div class="feature-card reveal"><div style="font-size:28px;">🧪</div><h3>QA &amp; Testing</h3><p>Comprehensive unit, integration, and UI testing. We ship code that works on every supported iOS version.</p></div>
+        <div class="feature-card reveal"><div style="font-size:28px;">📦</div><h3>App Store Submission</h3><p>Full App Store Connect setup, review preparation, and metadata optimization. We navigate approval for you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:80px 0;background:var(--surface);">
+    <div class="container">
+      <div class="section-label reveal">Tech Stack</div>
+      <h2 style="font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-1.5px;" class="reveal">Our iOS toolkit</h2>
+      <div class="tech-pills reveal">
+        <span class="tech-pill">Swift 5.9</span><span class="tech-pill">SwiftUI</span><span class="tech-pill">UIKit</span><span class="tech-pill">Combine</span><span class="tech-pill">Core Data</span><span class="tech-pill">CloudKit</span><span class="tech-pill">ARKit</span><span class="tech-pill">Core ML</span><span class="tech-pill">HealthKit</span><span class="tech-pill">StoreKit 2</span><span class="tech-pill">XCTest</span><span class="tech-pill">Fastlane</span><span class="tech-pill">Firebase</span><span class="tech-pill">Xcode Cloud</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:80px 0;text-align:center;">
+    <div class="container">
+      <h2 style="font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-2px;margin-bottom:16px;" class="reveal">Let's build your<br><span class="gradient-text">iOS masterpiece</span></h2>
+      <p style="color:var(--text-muted);font-size:17px;margin-bottom:32px;" class="reveal">Share your idea — we'll scope it, design it, and ship it to the App Store.</p>
+      <button class="btn-primary reveal" onclick="openModal()">Get a Free Estimate</button>
+    </div>
+  </section>
+
+</main>
+<footer></footer>
+<script src="/assets/main.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() { renderNav('ios'); });</script>
+</body>
+</html>

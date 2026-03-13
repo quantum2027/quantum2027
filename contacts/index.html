@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacts — COOLER COMPUTERS</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+  <style>
+    .contacts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; padding: 80px 0; }
+    .contact-items { display: flex; flex-direction: column; gap: 16px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 16px; }
+    .contact-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .contact-item-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .contact-item-val { font-size: 15px; font-weight: 500; margin-top: 2px; }
+    .contact-form-box { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 40px; }
+    .form-field { margin-bottom: 16px; }
+    .form-field label { display: block; font-size: 13px; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; }
+    .form-field input, .form-field textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; color: var(--text); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s; }
+    .form-field textarea { resize: vertical; min-height: 100px; }
+    .form-field input:focus, .form-field textarea:focus { border-color: var(--accent); }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: var(--text-muted); opacity: 0.5; }
+    .btn-submit { width: 100%; padding: 14px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; border: none; border-radius: 12px; font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.2s; margin-top: 8px; }
+    .btn-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+    @media (max-width: 900px) { .contacts-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav></nav>
+<main>
+
+  <section style="padding:140px 0 0;position:relative;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 30%, rgba(0,229,255,0.06), transparent 60%);pointer-events:none;"></div>
+    <div class="container" style="position:relative;z-index:1;text-align:center;">
+      <div class="section-label" style="justify-content:center;">Contacts</div>
+      <h1 style="font-size:clamp(40px,6vw,72px);font-weight:800;letter-spacing:-3px;line-height:1.05;margin-bottom:16px;">Let's <span class="gradient-text">talk.</span></h1>
+      <p style="color:var(--text-muted);font-size:18px;max-width:480px;margin:0 auto;">Have a project in mind? We respond to every inquiry within 24 hours.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="contacts-grid">
+      <div class="reveal">
+        <h2 style="font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-1.5px;margin-bottom:20px;">Get in touch<br>with our team</h2>
+        <p style="color:var(--text-muted);font-size:16px;line-height:1.8;margin-bottom:32px;">We're always excited to hear about new projects. Whether you have a full brief or just a spark of an idea, we'd love to hear from you.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div><div class="contact-item-label">Address</div><div class="contact-item-val">Al. Aleje Jerozolimskie 89/43<br>02-001 Warszawa, Poland</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div><div class="contact-item-label">Email</div><div class="contact-item-val"><a href="mailto:support@quantum-2027.com" style="color:var(--accent);">support@quantum-2027.com</a></div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div><div class="contact-item-label">Response Time</div><div class="contact-item-val">Within 24 hours</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-box reveal">
+        <h3 style="font-family:var(--font-head);font-size:22px;font-weight:700;margin-bottom:24px;">Send us a message</h3>
+        <div class="form-field"><label>Name</label><input type="text" placeholder="Your full name" /></div>
+        <div class="form-field"><label>Company</label><input type="text" placeholder="Company name" /></div>
+        <div class="form-field"><label>Email</label><input type="email" placeholder="your@email.com" /></div>
+        <div class="form-field"><label>Message</label><textarea placeholder="Tell us about your project..."></textarea></div>
+        <button class="btn-submit" onclick="this.textContent='✅ Sent! We will reply within 24h';this.style.background='linear-gradient(135deg,#06ffa5,#00e5ff)';this.style.color='#000';this.disabled=true;">Send Message</button>
+        <p style="font-size:11px;color:var(--text-muted);margin-top:12px;text-align:center;">By clicking "Send Message", you agree to processing of personal data in accordance with the <a href="/policy" style="color:var(--accent);text-decoration:underline;">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+<footer></footer>
+<script src="/assets/main.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() { renderNav('contacts'); });</script>
+</body>
+</html>
