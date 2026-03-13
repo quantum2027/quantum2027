@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>COOLER COMPUTERS</title>
+  <script>
+    // GitHub Pages SPA clean URL fallback
+    // /policy → serves /policy/index.html
+    var l = window.location;
+    var pathParts = l.pathname.replace(/\/$/, '').split('/');
+    var last = pathParts[pathParts.length - 1];
+    // If path ends in a known section, redirect to folder index
+    var sections = ['ios','android','publishing','contacts','team','about','policy'];
+    if (sections.indexOf(last) !== -1) {
+      l.replace(l.origin + '/' + last + '/index.html');
+    } else {
+      l.replace(l.origin + '/index.html');
+    }
+  </script>
+</head>
+<body>Redirecting...</body>
+</html>
