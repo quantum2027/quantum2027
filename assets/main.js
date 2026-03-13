@@ -129,7 +129,7 @@ function renderFooter() {
         </div>
       </div>
       <div class="footer-bottom">
-        <span>COOLER COMPUTERS Sp. z o.o.</span>
+        <span>COOLER COMPUTERS SP Z O O</span>
         <span>© 2026 COOLER COMPUTERS Sp. z o.o. — All rights reserved.</span>
       </div>
     </div>
