@@ -8,6 +8,7 @@ function renderNav(activePage) {
   nav.innerHTML = `
     <a href="/" class="nav-logo">
       <div class="nav-logo-icon">❄</div>
+      <img src="logo.png" style="width:36px;height:36px;object-fit:contain;" />
       <span>COOLER<span style="color:var(--accent)">.</span></span>
     </a>
 
