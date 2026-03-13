@@ -7,7 +7,7 @@ function renderNav(activePage) {
 
   nav.innerHTML = `
     <a href="/" class="nav-logo">
-      <img src="logo.png" style="width:36px;height:36px;object-fit:contain;" />
+      <img src="/assets/logo.png" style="width:36px;height:36px;object-fit:contain;" />
       <span>COOLER COMPUTERS<span style="color:var(--accent)">.</span></span>
     </a>
 
